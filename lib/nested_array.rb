@@ -23,7 +23,7 @@ CONVENTIONAL_PRODUCE = [
 
 def assembled_matrix
   new_array = [CONVENTIONAL_PRODUCE, ORGANIC_PRODUCE]
-  # OR  new_array.push(CONVENTIONAL_PRODUCE, ORGANIC_PRODUCE)
+  # OR  new_array.push(CONVENTIONAL_PRODUCE, ORGANIC_PRODUCE) and set new_array to empty array
   new_array  
 end
 
@@ -34,13 +34,17 @@ end
   
 def sorted_matrix
   new_array = [CONVENTIONAL_PRODUCE.sort, ORGANIC_PRODUCE.sort]
-  # new_array.push(CONVENTIONAL_PRODUCE.sort, ORGANIC_PRODUCE.sort)
+  # OR new_array.push(CONVENTIONAL_PRODUCE.sort, ORGANIC_PRODUCE.sort) and set new_array to empty array
   new_array
 end
 
-def matrix_lookup(matrix, row, column)
+
+
   # Given any matrix (array of arrays), a row index and a column index, 
   # Return the matrix's content at that row and and column
+  
+def matrix_lookup(matrix, row, column)
+  matrix[row][column]
 end
 
 def matrix_update(matrix, row, column, new_value)
